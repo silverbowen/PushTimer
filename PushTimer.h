@@ -2,26 +2,29 @@
 #include <string>
 #include <iostream>
 #include <limits>
+#include <list>
 
 class PushTimer
 {
 public:
     PushTimer();
-    //PushTimer(const std::string& timer, Interval& interval, Reps& reps);
+    PushTimer(const std::string& timerID, int reps, std::list<int>& interval);
+    virtual ~PushTimer() = 0;
 
-    //void setTimer(const std::string& timer);
-    //void setInterval(Interval& interval);
-    //void setReps(Reps& reps);
+    virtual void setTimerID(const std::string& timer) {};
+    virtual void setReps(int reps) {};
+    virtual void setInterval(std::list<int>& interval) {};
 
     //void readTimer(std::istream& input);
     //void readInterval(std::istream& input);
     //void readReps(std::istream& input);
 
-    //Interval* getInterval() const;
-    //Reps* getReps() const;
+    virtual const std::string& getTimerID() const;
+    virtual const int getReps() const;
+    virtual const std::list<int>& getInterval() const;
 
 private:
-    std::string timer = "timer not defined";
-    //Reps reps();
-    //Interval interval();
+    std::string timerID {"timer not defined"};
+    int reps {0};
+    std::list<int> interval {0};
 };

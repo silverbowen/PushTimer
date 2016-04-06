@@ -31,8 +31,13 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="ExerciseEnforcer.cpp" />
+		<Unit filename="ExerciseEnforcer.h" />
+		<Unit filename="PushTimer.cpp" />
+		<Unit filename="PushTimer.h" />
 		<Unit filename="TimerTestSuite1.h" />
 		<Unit filename="TimerTestSuite2.h" />
+		<Unit filename="TimerTestSuite3.h" />
 		<Unit filename="runner.cpp" />
 		<Extensions>
 			<code_completion />
