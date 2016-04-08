@@ -1,22 +1,27 @@
+/* This suite tests the set functions of a parameterized
+   instantiation of an ExerciseEnforcer object assigned
+   to a PushTimer pointer for polymorphism.
+*/
+
 #include <cxxtest/TestSuite.h>
 #include "ExerciseEnforcer.h"
 
 class TimerTestSuite3 : public CxxTest::TestSuite
 {
-    std::string exercise{"Push Ups!"},
-                newExercise{"New Exercise!"};
-    int reps{5},
-        newReps{7};
-    std::list<int> interval{30,40,50},
-                   newInterval{60, 70, 80};
+    std::string timerID {"Push Ups!"},
+                newTimerID {"New Exercise!"};
+    int reps {5},
+        newReps {7};
+    std::list<int> interval {30,40,50},
+                   newInterval {60, 70, 80};
+    ExerciseEnforcer exerciseEnforcer {timerID, reps, interval};
+    PushTimer* pushTimer {&exerciseEnforcer};
 
 public:
 
-     void testExerciseEnforcerTimerID(void)
+    void testExerciseEnforcerTimerID(void)
     {
-        ExerciseEnforcer exerciseEnforcer(exercise, reps, interval);
-        PushTimer* pushTimer = &exerciseEnforcer;
-        pushTimer->setTimerID(newExercise);
+        pushTimer->setTimerID(newTimerID);
 
         TS_ASSERT(pushTimer->getTimerID() != "Push Ups!");
         TS_ASSERT(pushTimer->getTimerID() == "New Exercise!");
@@ -24,8 +29,6 @@ public:
 
     void testExerciseEnforcerReps(void)
     {
-        ExerciseEnforcer exerciseEnforcer(exercise, reps, interval);
-        PushTimer* pushTimer = &exerciseEnforcer;
         pushTimer->setReps(newReps);
 
         TS_ASSERT(pushTimer->getReps() != 5);
@@ -34,8 +37,6 @@ public:
 
     void testExerciseEnforcerInterval(void)
     {
-        ExerciseEnforcer exerciseEnforcer(exercise, reps, interval);
-        PushTimer* pushTimer = &exerciseEnforcer;
         pushTimer->setInterval(newInterval);
 
         auto intervalIt = newInterval.begin();

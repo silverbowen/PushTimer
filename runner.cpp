@@ -25,23 +25,23 @@ bool suite_TimerTestSuite1_init = false;
 static TimerTestSuite1 suite_TimerTestSuite1;
 
 static CxxTest::List Tests_TimerTestSuite1 = { 0, 0 };
-CxxTest::StaticSuiteDescription suiteDescription_TimerTestSuite1( "TimerTestSuite1.h", 4, "TimerTestSuite1", suite_TimerTestSuite1, Tests_TimerTestSuite1 );
+CxxTest::StaticSuiteDescription suiteDescription_TimerTestSuite1( "TimerTestSuite1.h", 8, "TimerTestSuite1", suite_TimerTestSuite1, Tests_TimerTestSuite1 );
 
 static class TestDescription_suite_TimerTestSuite1_testExerciseEnforcerTimerID : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_TimerTestSuite1_testExerciseEnforcerTimerID() : CxxTest::RealTestDescription( Tests_TimerTestSuite1, suiteDescription_TimerTestSuite1, 10, "testExerciseEnforcerTimerID" ) {}
+ TestDescription_suite_TimerTestSuite1_testExerciseEnforcerTimerID() : CxxTest::RealTestDescription( Tests_TimerTestSuite1, suiteDescription_TimerTestSuite1, 14, "testExerciseEnforcerTimerID" ) {}
  void runTest() { suite_TimerTestSuite1.testExerciseEnforcerTimerID(); }
 } testDescription_suite_TimerTestSuite1_testExerciseEnforcerTimerID;
 
 static class TestDescription_suite_TimerTestSuite1_testExerciseEnforcerReps : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_TimerTestSuite1_testExerciseEnforcerReps() : CxxTest::RealTestDescription( Tests_TimerTestSuite1, suiteDescription_TimerTestSuite1, 16, "testExerciseEnforcerReps" ) {}
+ TestDescription_suite_TimerTestSuite1_testExerciseEnforcerReps() : CxxTest::RealTestDescription( Tests_TimerTestSuite1, suiteDescription_TimerTestSuite1, 20, "testExerciseEnforcerReps" ) {}
  void runTest() { suite_TimerTestSuite1.testExerciseEnforcerReps(); }
 } testDescription_suite_TimerTestSuite1_testExerciseEnforcerReps;
 
 static class TestDescription_suite_TimerTestSuite1_testExerciseEnforcerInterval : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_TimerTestSuite1_testExerciseEnforcerInterval() : CxxTest::RealTestDescription( Tests_TimerTestSuite1, suiteDescription_TimerTestSuite1, 22, "testExerciseEnforcerInterval" ) {}
+ TestDescription_suite_TimerTestSuite1_testExerciseEnforcerInterval() : CxxTest::RealTestDescription( Tests_TimerTestSuite1, suiteDescription_TimerTestSuite1, 26, "testExerciseEnforcerInterval" ) {}
  void runTest() { suite_TimerTestSuite1.testExerciseEnforcerInterval(); }
 } testDescription_suite_TimerTestSuite1_testExerciseEnforcerInterval;
 
@@ -50,23 +50,23 @@ public:
 static TimerTestSuite2 suite_TimerTestSuite2;
 
 static CxxTest::List Tests_TimerTestSuite2 = { 0, 0 };
-CxxTest::StaticSuiteDescription suiteDescription_TimerTestSuite2( "TimerTestSuite2.h", 4, "TimerTestSuite2", suite_TimerTestSuite2, Tests_TimerTestSuite2 );
+CxxTest::StaticSuiteDescription suiteDescription_TimerTestSuite2( "TimerTestSuite2.h", 9, "TimerTestSuite2", suite_TimerTestSuite2, Tests_TimerTestSuite2 );
 
 static class TestDescription_suite_TimerTestSuite2_testExerciseEnforcerTimerID : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_TimerTestSuite2_testExerciseEnforcerTimerID() : CxxTest::RealTestDescription( Tests_TimerTestSuite2, suiteDescription_TimerTestSuite2, 11, "testExerciseEnforcerTimerID" ) {}
+ TestDescription_suite_TimerTestSuite2_testExerciseEnforcerTimerID() : CxxTest::RealTestDescription( Tests_TimerTestSuite2, suiteDescription_TimerTestSuite2, 19, "testExerciseEnforcerTimerID" ) {}
  void runTest() { suite_TimerTestSuite2.testExerciseEnforcerTimerID(); }
 } testDescription_suite_TimerTestSuite2_testExerciseEnforcerTimerID;
 
 static class TestDescription_suite_TimerTestSuite2_testExerciseEnforcerReps : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_TimerTestSuite2_testExerciseEnforcerReps() : CxxTest::RealTestDescription( Tests_TimerTestSuite2, suiteDescription_TimerTestSuite2, 20, "testExerciseEnforcerReps" ) {}
+ TestDescription_suite_TimerTestSuite2_testExerciseEnforcerReps() : CxxTest::RealTestDescription( Tests_TimerTestSuite2, suiteDescription_TimerTestSuite2, 25, "testExerciseEnforcerReps" ) {}
  void runTest() { suite_TimerTestSuite2.testExerciseEnforcerReps(); }
 } testDescription_suite_TimerTestSuite2_testExerciseEnforcerReps;
 
 static class TestDescription_suite_TimerTestSuite2_testExerciseEnforcerInterval : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_TimerTestSuite2_testExerciseEnforcerInterval() : CxxTest::RealTestDescription( Tests_TimerTestSuite2, suiteDescription_TimerTestSuite2, 29, "testExerciseEnforcerInterval" ) {}
+ TestDescription_suite_TimerTestSuite2_testExerciseEnforcerInterval() : CxxTest::RealTestDescription( Tests_TimerTestSuite2, suiteDescription_TimerTestSuite2, 31, "testExerciseEnforcerInterval" ) {}
  void runTest() { suite_TimerTestSuite2.testExerciseEnforcerInterval(); }
 } testDescription_suite_TimerTestSuite2_testExerciseEnforcerInterval;
 
@@ -75,23 +75,23 @@ public:
 static TimerTestSuite3 suite_TimerTestSuite3;
 
 static CxxTest::List Tests_TimerTestSuite3 = { 0, 0 };
-CxxTest::StaticSuiteDescription suiteDescription_TimerTestSuite3( "TimerTestSuite3.h", 4, "TimerTestSuite3", suite_TimerTestSuite3, Tests_TimerTestSuite3 );
+CxxTest::StaticSuiteDescription suiteDescription_TimerTestSuite3( "TimerTestSuite3.h", 9, "TimerTestSuite3", suite_TimerTestSuite3, Tests_TimerTestSuite3 );
 
 static class TestDescription_suite_TimerTestSuite3_testExerciseEnforcerTimerID : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_TimerTestSuite3_testExerciseEnforcerTimerID() : CxxTest::RealTestDescription( Tests_TimerTestSuite3, suiteDescription_TimerTestSuite3, 15, "testExerciseEnforcerTimerID" ) {}
+ TestDescription_suite_TimerTestSuite3_testExerciseEnforcerTimerID() : CxxTest::RealTestDescription( Tests_TimerTestSuite3, suiteDescription_TimerTestSuite3, 22, "testExerciseEnforcerTimerID" ) {}
  void runTest() { suite_TimerTestSuite3.testExerciseEnforcerTimerID(); }
 } testDescription_suite_TimerTestSuite3_testExerciseEnforcerTimerID;
 
 static class TestDescription_suite_TimerTestSuite3_testExerciseEnforcerReps : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_TimerTestSuite3_testExerciseEnforcerReps() : CxxTest::RealTestDescription( Tests_TimerTestSuite3, suiteDescription_TimerTestSuite3, 25, "testExerciseEnforcerReps" ) {}
+ TestDescription_suite_TimerTestSuite3_testExerciseEnforcerReps() : CxxTest::RealTestDescription( Tests_TimerTestSuite3, suiteDescription_TimerTestSuite3, 30, "testExerciseEnforcerReps" ) {}
  void runTest() { suite_TimerTestSuite3.testExerciseEnforcerReps(); }
 } testDescription_suite_TimerTestSuite3_testExerciseEnforcerReps;
 
 static class TestDescription_suite_TimerTestSuite3_testExerciseEnforcerInterval : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_TimerTestSuite3_testExerciseEnforcerInterval() : CxxTest::RealTestDescription( Tests_TimerTestSuite3, suiteDescription_TimerTestSuite3, 35, "testExerciseEnforcerInterval" ) {}
+ TestDescription_suite_TimerTestSuite3_testExerciseEnforcerInterval() : CxxTest::RealTestDescription( Tests_TimerTestSuite3, suiteDescription_TimerTestSuite3, 38, "testExerciseEnforcerInterval" ) {}
  void runTest() { suite_TimerTestSuite3.testExerciseEnforcerInterval(); }
 } testDescription_suite_TimerTestSuite3_testExerciseEnforcerInterval;
 

@@ -1,10 +1,14 @@
+/* This suite tests a default instantiation of an ExerciseEnforcer
+   object assigned to a PushTimer pointer for polymorphism.
+*/
+
 #include <cxxtest/TestSuite.h>
 #include "ExerciseEnforcer.h"
 
 class TimerTestSuite1 : public CxxTest::TestSuite
 {
     ExerciseEnforcer exerciseEnforcer;
-    PushTimer* pushTimer{&exerciseEnforcer};
+    PushTimer* pushTimer {&exerciseEnforcer};
 
 public:
     void testExerciseEnforcerTimerID(void)

@@ -15,10 +15,6 @@ public:
     virtual void setReps(int reps) {};
     virtual void setInterval(std::list<int>& interval) {};
 
-    //void readTimer(std::istream& input);
-    //void readInterval(std::istream& input);
-    //void readReps(std::istream& input);
-
     virtual const std::string& getTimerID() const;
     virtual const int getReps() const;
     virtual const std::list<int>& getInterval() const;
