@@ -60,30 +60,22 @@ int main()
 
     pushTimer->setInterval(newInterval);
 
-    for (int i = 1; i <= pushTimer->getReps(); ++i)
+    int repIndex = 1;
+    for (int currentInterval : pushTimer->getInterval())
     {
-        std::cout << "\n" << pushTimer->getTimerID() << "!!! - Time for rep #" << i << "\n";
+        std::cout << "\n" << pushTimer->getTimerID() << "!!! - Time for rep #" << repIndex << "\n"
+                  << "Hit enter when you've exercised to start the countdown to rep #"
+                  << repIndex+1 << ".\n";
+        std::cin.get();
+        std::cout << "Rep #" << repIndex+1 << " in " << currentInterval << " minutes...\n\n";
 
-        for (int currentInterval : pushTimer->getInterval())
-        {
-            if (i < pushTimer->getReps())
-            {
-                std::cout << "Hit enter when you've exercised to start the countdown to rep #"
-                          << i + 1 << ".\n";
-                std::cin.get();
-                std::cout << "Rep #" << i + 1 << " in " << currentInterval << " minutes...\n\n";
-
-                countdown(currentInterval);
-            }
-
-            else
-            {
-                std::cout << "Hit enter when you've exercised to end program.\n";
-                std::cin.get();
-                std::cout << "Congrats! You're done!\n";
-            }
-        }
+        countdown(currentInterval);
+        ++repIndex;
     }
+
+    std::cout << "Hit enter when you've exercised to end program.\n";
+    std::cin.get();
+    std::cout << "Congrats! You're done!\n";
 }
 
 void countdown (const int currentInterval)
