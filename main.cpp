@@ -1,8 +1,7 @@
 #include "ExerciseEnforcer.h"
 #include <unistd.h>
-#include <SFML/Audio.hpp>
+#include "TerminalCountdown.h"
 
-void countdown(const int interval);
 
 int main()
 {
@@ -69,52 +68,11 @@ int main()
         std::cin.get();
         std::cout << "Rep #" << repIndex+1 << " in " << currentInterval << " minutes...\n\n";
 
-        countdown(currentInterval);
+        TerminalCountdown terminalCountdown(currentInterval);
         ++repIndex;
     }
 
     std::cout << "Hit enter when you've exercised to end program.\n";
     std::cin.get();
     std::cout << "Congrats! You're done!\n";
-}
-
-void countdown (const int currentInterval)
-{
-    int countdown = currentInterval * 60;
-    sf::SoundBuffer beepBuffer, alarmBuffer;
-    sf::Sound alarm, beep;
-
-    if (!beepBuffer.loadFromFile("beep.wav"))
-        std::cout << "beep.wav not found!";
-    if (!alarmBuffer.loadFromFile("alarm.wav"))
-        std::cout << "alarm.wav not found!";
-
-    beep.setBuffer(beepBuffer);
-
-    alarm.setLoop(true);
-    alarm.setBuffer(alarmBuffer);
-
-    while (countdown > 60)
-    {
-        sleep(60);
-        countdown -= 60;
-        std::cout << countdown / 60 << " minutes\n";
-    }
-
-    while (countdown > 1)
-    {
-        --countdown;
-        sleep(1);
-        std::cout << countdown << " seconds\n";
-        if (countdown <= 10) beep.play();
-    }
-
-    sleep(1);
-    std::cout << "\nHit enter to stop alarm!";
-
-    do
-    {
-        alarm.play();
-    }
-    while (std::cin.get()!='\n');
 }
